@@ -7,6 +7,7 @@
       url: "/route/" + $("form input").val(),
       type: 'GET',
       success: function(data) {
+        console.log(data);
         var results = $.parseJSON(data);
         console.log(results);
         if (results && results.length !== 0) {
