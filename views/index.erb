@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dash</title>
+
+    <link rel="shortcut icon" href="img/dash.png">
+    <!-- TODO(jdlew): Try using glyphicon instead of external img? -->
+    <!--span class="glyphicon glyphicon-search"></span-->
+
+    <!-- Custom JS -->
+    <script src="js/dash.js"></script>
+    <script src="js/utils.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <!--link href="css/bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/dash.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Top Navigation -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <!--div class="container-fluid"-->
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dash</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="./">Login</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+      <!--div class="row row-centered">
+        <h1>DASH</h1>
+        <p>Find your most optimized route.</p>
+      </div-->
+      <!-- /.row -->
+      <div class="row" style="padding: 50px 100px 50px;">
+        <form id="search" role="form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Starting point">
+            <!-- TODO(jdlew): Replace 'input-group-btn' below with this if
+            we don't want the search icon to be clickable.-->
+            <!--span class="input-group-addon">
+              <span class="glyphicon glyphicon-search"></span>
+            </span-->
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
+      <!-- /.row -->
+
+      <!-- Search Results -->
+      <div id="results" style="display: none;">
+      </div>
+      <!-- End Search Results -->
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="navbar-default">
+      <div class="container text-center">
+        <p>Copyright &copy; Dash 2015</p>
+      </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <!--script src="js/jquery-1.11.0.js"></script-->
+    <!-- code.jquery.com/jquery-1.11.0.min.js -->
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script>
+      $("#search").submit(function(event) {
+        get_route();
+        event.preventDefault();
+      });
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <!--script src="js/bootstrap.min.js"></script-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
